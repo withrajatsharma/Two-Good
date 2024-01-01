@@ -1,3 +1,14 @@
+
+@font-face {
+    font-family: headline;
+    src: url(./assets/Futura-Bold.woff2);
+}
+
+@font-face {
+    font-family: para;
+    src: url(./assets/helvetica-now-text-regular-woff-2-4479bd.woff2);
+}
+
 *{
 margin: 0;
 padding: 0;
@@ -6,5 +17,207 @@ box-sizing: border-box;
 html,body{
 width: 100%;
 height: 100%;
+font-family: para;
 font-size: 2.66vw;
+}
+
+main{
+    padding: 0 .8rem;
+    background-color: #f7f7f7;
+}
+
+section{
+    width: 100%;
+    position: relative;
+}
+
+*::selection{
+    color: white;
+    background-color: black;
+}
+
+#cursor{
+    display: flex;
+    justify-content: center;
+    width: 15px;
+    height:15px;
+    position: fixed;
+    align-items: center;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: .4rem;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    top: -10px;
+    left: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+
+
+/* page-1 start */
+
+#page1{
+    /* border: 2px solid rebeccapurple; */
+    padding-bottom: 1rem;
+    padding-top: 30vh;
+    /* padding-top: 10px; */
+}
+
+
+#page1 h1{
+    text-transform: uppercase;
+    font-family: headline;
+    font-weight: 900;
+    text-align: center;
+    font-size: 6rem;
+    word-spacing: -.4rem;
+    line-height: 5.2rem;
+    letter-spacing: -.3rem;
+}
+
+#page1 h1 span{
+    display: inline-block;
+}
+
+
+
+
+
+/* page-1 end */
+
+
+/* ------------------------------------------------------------------------------------------- */
+
+/* page-2 start */
+
+
+#page2 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* page-2 end */
+
+
+/* ------------------------------------------------------------------------------------------------ */
+
+
+/* page-3 start  */
+
+
+
+#page-3-line{
+    display:flex;
+    justify-content:space-between;
+    font-size: clamp(12px,.4rem,15px);
+    align-items:center;
+    /* padding-bottom: 4px; */
+    padding-top: 20px;
+    border-bottom: 1px solid black;
+}
+
+#cards{
+    padding-top: 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+}
+.elem{
+    width: 32%;
+    height: 18rem;
+    /* background-color: red; */
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+}
+
+.elem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    object-position: center 100%;
+}
+
+.card{
+    width: 60%;
+    border-radius: 25px;
+    height: 50px;
+    background-color: #e7f0d8;
+    position:absolute;
+    top:40%;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.vis{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height: 50px;
+    font-size: 12px;
+}
+
+.novis{
+    display: flex;
+    font-size: 12px;
+    width: 100%;
+    height: 150px;
+    display: flex;
+
+}
+.novis div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+.novis img{
+height: 60%;
+width: 50%;
+}
+
+.vis>div{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.page{
+    height: 100vh;
+}
+
+/* page-3 end */
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* media queries */
+
+@media screen and (max-width:1023px) {
+    #cards{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .elem{
+        width: 100%;
+        height: 50rem;
+    }
+    .card{
+        width: clamp(280px,30%,50%);
+    }
 }
