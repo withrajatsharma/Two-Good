@@ -116,20 +116,33 @@ page5.addEventListener("mouseenter" , (e)=>{
 
 
 
-
+gsap.from("nav",{
+    y:-10,
+    opacity:0,
+    delay:.25,
+    duration:.4,
+    stagger:.25
+})
 
 
 gsap.from("#page1 h1 span",{
     y:80,
     opacity:0,
-    delay:.25,
+    delay:.5,
     duration:.4,
     stagger:.25
 })
 gsap.from("#page2 video",{
     y:50,
     opacity:0,
-    delay:.55,
+    delay:.7,
+    duration:.4,
+    
+})
+gsap.from("#page3",{
+    y:50,
+    opacity:0,
+    delay:.7,
     duration:.4,
     
 })
