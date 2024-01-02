@@ -24,6 +24,7 @@ font-size: 2.66vw;
 main{
     padding: 0 .8rem;
     background-color: #ececec;
+    
 }
 
 section{
@@ -85,6 +86,104 @@ section{
 }
 
 
+nav{
+    width: 100%;
+    height: 80px;
+    /* background-color: rebeccapurple; */
+    position: fixed;    
+    top: 3%;
+    left: 0;
+    padding: 0 .8rem;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    z-index: 9;
+}
+
+
+nav a{
+    color: black;
+    text-decoration: none;
+    /* font-size: 20px; */
+    position: relative;
+}
+
+#nav-rgt{
+    /* background-color: red; */
+    display: flex;
+    /* align-items: start; */
+    gap: 70px;
+    font-size: 15px;
+
+}
+
+.nonstick{
+    /* background-color: red; */
+    color: black;
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.stick{
+    background-color: #ececec;
+    color: black;
+    height: 30px;
+    /* width: 100px; */
+    gap: 70px;
+    border-radius: 25px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0px 12px;
+}
+
+.stick i:hover{
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.nav-under{
+    overflow: hidden;
+}
+.nav-under:hover{
+    color: rgb(118, 118, 118);
+}
+
+.nav-under::after{
+    content: "";
+    position: absolute;
+    width:80%;
+    height: 1px;
+    background-color: rgb(138, 138, 138);
+    bottom: 0px;
+    left: -80%;
+    transition: all ease .8s;
+
+}
+
+.nav-under:hover::after{
+    left: 100%;
+}
+#logo{
+    /* background-color: red; */
+    /* display: flex; */
+    position: relative;
+    overflow: hidden;    
+}
+#lg-1{
+    width: 100%;
+    height: 100%;
+}
+#lg-2{
+    position: absolute;
+    bottom: -250%;
+    width: 100%;
+    height: 95%;
+    left: -10%;
+}
 
 
 
@@ -244,7 +343,7 @@ width: 50%;
     width: fit-content;
     cursor: pointer;
 }
-#rgt-4 p:nth-child(3)::after{
+.underline::after{
     content: "";
     position: absolute;
     width: 100%;
@@ -254,7 +353,7 @@ width: 50%;
     left: 0;
 }
 
-#rgt-4 p:nth-child(3)::before{
+.underline::before{
     content: "";
     position: absolute;
     width: 80%;
@@ -267,9 +366,10 @@ width: 50%;
 }
 
 
-#rgt-4 p:nth-child(3):hover::before{
+.underline:hover::before{
     left: 100%;
 }
+
 
 
 /* page-4 end */
@@ -339,6 +439,25 @@ width: 50%;
 /* media queries */
 
 @media screen and (max-width:1023px) {
+    .nonstick{
+        display: none;
+    }
+
+    
+.stick{
+    gap: 40px;
+    font-size: 18px;
+}
+    #lg-1{
+        width: 80%;
+        padding-left: 5px;
+    }
+    #lg-2{
+        width: 70%;
+        bottom: -240%;
+        padding-left: 12px;
+    }
+
     #page1 h1{
         font-size: 5.8rem;
         letter-spacing: -.1rem;

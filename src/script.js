@@ -1,6 +1,7 @@
 (()=>{    
 const isTouchDevice = 'ontouchstart' in window;
 if (!isTouchDevice) {
+   (()=>{
     var page2 = document.querySelector("#page2");
     var cursor = document.querySelector("#cursor");
     
@@ -8,9 +9,25 @@ if (!isTouchDevice) {
         gsap.to(cursor,{
           top:e.y,
           left:e.x,
-          duration:.3
+          duration:.3,
         })
   })
+
+  document.querySelectorAll('#nav-rgt *').forEach(elem=>{
+    elem.addEventListener("mouseenter" ,()=>{
+      gsap.to(cursor,{
+        opacity:0,
+        scale:0
+      })
+    } )
+    elem.addEventListener("mouseleave" ,()=>{
+      gsap.to(cursor,{
+        opacity:1,
+        scale:1
+      })
+    } )
+  });
+
 
   document.addEventListener("mouseenter" ,()=>{
     gsap.to(cursor,{
@@ -50,8 +67,8 @@ if (!isTouchDevice) {
 page5.addEventListener("mouseenter" , (e)=>{
     
           gsap.to(cursor,{
-            width:"5.5rem",
-            height:"5.5rem",
+            width:"6rem",
+            height:"6rem",
             backgroundColor:"#d8e0e0",
             translateY:"-50%",
             opacity:.7,
@@ -71,14 +88,10 @@ page5.addEventListener("mouseenter" , (e)=>{
           })
     
     })
+   })();
 
 
-}
-   
-    })();
-
-
-(()=>{
+   (()=>{
     const lenis = new Lenis({
         duration: 2.5, // increase or decrese duration value to change smoothness values on website
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -94,6 +107,13 @@ page5.addEventListener("mouseenter" , (e)=>{
                       
         requestAnimationFrame(raf);
 })();
+
+
+}
+   
+    })();
+
+
 
 
 
@@ -164,10 +184,47 @@ card.forEach(card=>{
 })
 
 
-// let underlinebtn = document.querySelector('#rgt-4 p:nth-child(3)');
-// let underline = window.getComputedStyle(underlinebtn,"::after");
-// underlinebtn.addEventListener("mouseenter" ,()=>{
-//   gsap.to(underline,{
-//     backgroundColor:"red",
-//   })
-// } )
+let lg1 = document.querySelector('#lg-1');
+let lg2 = document.querySelector('#lg-2');
+
+
+gsap.to(lg1,{
+  y:"-=104%",
+  duration:.2,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: "  nav" ,
+    scroller: "body" ,
+    start: "10% 0%  " ,
+    end: " 10% 0% " ,
+    // markers: true,
+    scrub: 2,// increase val for more smootheness
+  }
+})
+gsap.to(lg2,{
+  y:"-=130%",
+  duration:.2,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: "  nav" ,
+    scroller: "body" ,
+    start: "10% 0%  " ,
+    end: "10% 0%  " ,
+    // markers: true,
+    scrub: 2,// increase val for more smootheness
+  }
+})
+gsap.to(".nonstick a",{
+  y:"-=300%",
+  opacity:0,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: "  nav" ,
+    scroller: "body" ,
+    start: "10% 0%  " ,
+    end: "10% 0%  " ,
+    // markers: true,
+    scrub: 1,// increase val for more smootheness
+  }
+})
+
