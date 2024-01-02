@@ -23,7 +23,7 @@ font-size: 2.66vw;
 
 main{
     padding: 0 .8rem;
-    background-color: #f7f7f7;
+    background-color: #ececec;
 }
 
 section{
@@ -206,6 +206,76 @@ width: 50%;
 
 /* --------------------------------------------------------------------------------------------- */
 
+/* page-4 start */
+
+
+#page4{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+}
+
+#lft-4{
+    font-family: headline;
+    font-size: 38px;
+    /* font-size: clamp(1.4rem,); */
+    line-height: 1;
+    width: 50%;
+}
+#rgt-4{
+    width: 32%;
+    font-size: 16px;
+    display:flex;
+    flex-direction: column;
+    gap: 34px;
+    /* padding-right: 100px; */
+    line-height: 1.5;
+    font-weight: 500;
+    color: rgb(58, 58, 58);
+}
+#rgt-4 p{
+    width: 75%;
+}
+
+#rgt-4 p:nth-child(3){
+    font-size: 12px;
+    position: relative;
+    /* background-color: rebeccapurple; */
+    width: fit-content;
+    cursor: pointer;
+}
+#rgt-4 p:nth-child(3)::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(118, 118, 118);
+    bottom: -8px;
+    left: 0;
+}
+
+#rgt-4 p:nth-child(3)::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    background-color: #ececec;
+    transition: all ease .8s;
+    bottom: -8px;
+    left: -80%;
+    z-index: 2;
+}
+
+
+#rgt-4 p:nth-child(3):hover::before{
+    left: 100%;
+}
+
+
+/* page-4 end */
+
+/* --------------------------------------------------------------------------------------------- */
+
 /* media queries */
 
 @media screen and (max-width:1023px) {
@@ -219,5 +289,36 @@ width: 50%;
     }
     .card{
         width: clamp(280px,30%,50%);
+    }
+    #page4{
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding-top: 50px;
+
+    }
+    #lft-4{
+        width: 100%;
+        /* font-size: 7vw; */
+    }
+    #lft-4 h1{
+        font-size: clamp(35px,3rem,38px);
+
+    }
+    #rgt-4{
+        width: 100%;
+        /* padding-right: 0; */
+        font-size: 17px;
+        line-height: 1.3;
+
+    }
+    #rgt-4 p:nth-child(3){
+        font-size: 12px;
+        /* font-weight: 600; */
+        color: rgb(80, 80, 80);
+        margin: 0 auto;
+    }
+    #rgt-4 p{
+        width: 100%;
     }
 }

@@ -134,3 +134,11 @@ card.forEach(card=>{
     } )
 })
 
+
+// let underlinebtn = document.querySelector('#rgt-4 p:nth-child(3)');
+// let underline = window.getComputedStyle(underlinebtn,"::after");
+// underlinebtn.addEventListener("mouseenter" ,()=>{
+//   gsap.to(underline,{
+//     backgroundColor:"red",
+//   })
+// } )
