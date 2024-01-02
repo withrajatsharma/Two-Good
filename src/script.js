@@ -44,6 +44,35 @@ if (!isTouchDevice) {
           })
     
     })
+
+    let page5 = document.querySelector('#page5');
+
+page5.addEventListener("mouseenter" , (e)=>{
+    
+          gsap.to(cursor,{
+            width:"5.5rem",
+            height:"5.5rem",
+            backgroundColor:"#d8e0e0",
+            translateY:"-50%",
+            opacity:.7,
+            zIndex:0
+          })
+          
+    })
+    page5.addEventListener("mouseleave" , (e)=>{
+    
+          gsap.to(cursor,{
+            width:"15px",
+            height:"15px",
+            backgroundColor:"black",
+            opacity:1,
+            zIndex:10
+
+          })
+    
+    })
+
+
 }
    
     })();

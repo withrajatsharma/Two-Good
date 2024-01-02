@@ -274,18 +274,83 @@ width: 50%;
 
 /* page-4 end */
 
+/* -------------------------------------------------------------------------------------------- */
+
+/* page-5 start */
+
+
+#page5{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    cursor: pointer;
+    /* background-color: rebeccapurple; */
+}
+
+.sect-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid white; */
+}
+
+
+.sect-bottom{
+    font-size: 13px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.sect-bottom div{
+    width: 45%;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    gap: 8px;
+    align-items:center;
+    /* border: 1px solid red; */
+
+}
+
+.sect-top img{
+    width: 50%;
+    object-fit: cover;
+}
+.sect:nth-child(2) .sect-top{
+    justify-content: space-around;
+}
+.sect:nth-child(2) .sect-top img{
+    width: 42%;
+
+   
+}
+
+
+
+/* page-5 end */
+
+
+
+
 /* --------------------------------------------------------------------------------------------- */
 
 /* media queries */
 
 @media screen and (max-width:1023px) {
+    #page1 h1{
+        font-size: 5.8rem;
+        letter-spacing: -.1rem;
+
+    }
     #cards{
         flex-direction: column;
         gap: 15px;
     }
     .elem{
         width: 100%;
-        height: 50rem;
+        height: 80vmax;
     }
     .card{
         width: clamp(280px,30%,50%);
@@ -320,5 +385,9 @@ width: 50%;
     }
     #rgt-4 p{
         width: 100%;
+    }
+    .sect-bottom {
+        /* font-size: 12px; */
+        padding-top: 20px;
     }
 }
