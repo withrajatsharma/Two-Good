@@ -432,6 +432,92 @@ width: 50%;
 /* page-5 end */
 
 
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* page-6 start */
+
+#page6{
+    padding-top: 4rem;
+}
+
+#page6-line{
+    display:flex;
+    justify-content:space-between;
+    font-size: clamp(12px,.4rem,15px);
+    align-items:center;
+    /* padding-bottom: 4px; */
+    padding-top: 20px;
+    border-bottom: 1px solid black;
+
+}
+#page6-line p:nth-child(2){
+    text-align: right;
+    padding-left: 25px;
+}
+
+
+#in-page6{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+#pg6-rgt{
+    width: 62%;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+    overflow: hidden;
+}
+#pg6-rgt img{
+    object-position: 0% -15px; 
+    scale: 1.1;
+    width: 46%;
+    height: 100%;
+}
+
+#pg6-lft {
+    text-align: left;
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    gap: 40px;
+  
+}
+
+#pg6-lft h1{
+    font-size: 28px;
+    font-family: headline;
+}
+
+#pg6-lft p{
+    font-size: 15px;
+    line-height: 1.4;
+}
+#pg6-lft p:nth-child(5){
+    font-size: 10px;
+    word-spacing: .15rem;
+    letter-spacing: .04rem;
+    cursor: pointer;
+}
+.pg6-btn{
+    position: relative;
+    width: fit-content;
+}
+
+
+
+/* page-6 end */
+
+/* -------------------------------------------------------------------------------------------- */
+
+/* page-7 start  */
+
+/* page-7 end */
+
+
 
 
 /* --------------------------------------------------------------------------------------------- */
@@ -439,6 +525,10 @@ width: 50%;
 /* media queries */
 
 @media screen and (max-width:1023px) {
+
+    main{
+        padding: 0 1rem;
+    }
     .nonstick{
         display: none;
     }
@@ -459,7 +549,7 @@ width: 50%;
     }
 
     #page1 h1{
-        font-size: 5.8rem;
+        font-size: 5.7rem;
         letter-spacing: -.1rem;
 
     }
@@ -509,4 +599,32 @@ width: 50%;
         /* font-size: 12px; */
         padding-top: 20px;
     }
+
+    #in-page6{
+        flex-direction: column-reverse;
+    }
+    #pg6-rgt{
+        width: 100%;
+    }
+
+    #pg6-rgt img{
+        width: 42%;
+        scale: 1.3;
+    }
+
+    #pg6-lft{
+        width: 100%;
+        padding-top: 20px;
+        gap: 30px;
+    }
+    #pg6-lft p:not(:last-child){
+        width: clamp(10px,100%,600px);
+        font-size: 14px;
+    }
+    #pg6-lft p:nth-child(5){
+        font-size: 11px;
+        word-spacing: .2rem;
+        letter-spacing: .05rem;
+    }
+
 }

@@ -108,7 +108,37 @@ page5.addEventListener("mouseenter" , (e)=>{
         requestAnimationFrame(raf);
 })();
 
+gsap.from(".sect:nth-child(2)",{
+  y:"80",
+  opacity:0,
+  duration:.8,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: " #page5" ,
+    scroller: "body" ,
+    start: "30% 0%  " ,
+    end: "30% 0%  " ,
+    // markers: true,
+    // scrub: 1,// increase val for more smootheness
+  }
+})
 
+}
+else{
+  gsap.from(".sect:nth-child(2)",{
+    y:"80",
+    opacity:0,
+    duration:.8,
+    //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+    scrollTrigger:{
+      trigger: " #page5" ,
+      scroller: "body" ,
+      start: "-55% 0%  " ,
+      end: "-55% 0%  " ,
+      // markers: true,
+      // scrub: 1,// increase val for more smootheness
+    }
+  })
 }
    
     })();
@@ -240,4 +270,95 @@ gsap.to(".nonstick a",{
     scrub: 1,// increase val for more smootheness
   }
 })
+gsap.from("#lft-4",{
+  x:"-80",
+  opacity:0,
+  duration:.8,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: " #page3" ,
+    scroller: "body" ,
+    start: "20% 0%  " ,
+    end: "20% 0%  " ,
+    // markers: true,
+    // scrub: 1,// increase val for more smootheness
+  }
+})
+gsap.from("#rgt-4",{
+  x:"-80",
+  opacity:0,
+  duration:.8,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: " #page3" ,
+    scroller: "body" ,
+    start: "20% 0%  " ,
+    end: "20% 0%  " ,
+    // markers: true,
+    // scrub: 1,// increase val for more smootheness
+  }
+})
+gsap.from(".sect:nth-child(1)",{
+  y:"80",
+  opacity:0,
+  duration:.8,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: " #page4" ,
+    scroller: "body" ,
+    start: "20% 0%  " ,
+    end: "20% 0%  " ,
+    // markers: true,
+    // scrub: 1,// increase val for more smootheness
+  }
+})
+
+
+
+
+
+
+
+gsap.from("#pg6-lft",{
+  x:"-100",
+  opacity:0,
+  duration:.8,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: " #page5" ,
+    scroller: "body" ,
+    start: "80% 0%  " ,
+    end: "80% 0%  " ,
+    // markers: true,
+    // scrub: 1,// increase val for more smootheness
+  }
+})
+gsap.from("#pg6-rgt img",{
+  opacity:0,
+  duration:1,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: " #page5" ,
+    scroller: "body" ,
+    start: "80% 0%  " ,
+    end: "80% 0%  " ,
+    // markers: true,
+    // scrub: 1,// increase val for more smootheness
+  }
+})
+gsap.to("#pg6-rgt img",{
+  objectPosition: "0% 50px",
+  // duration:1,
+  //check official documentation for different types of effects according to the need no need to stick only to these properties i checked the documentation and it was very easy to understand with interactions and in learnt a lot so always refer to them
+  scrollTrigger:{
+    trigger: " #page6" ,
+    scroller: "body" ,
+    start: "-20% 0%  " ,
+    end: "100% 0%  " ,
+    // markers: true,
+    scrub: 1,// increase val for more smootheness
+  }
+})
+
+
 
