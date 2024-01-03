@@ -362,3 +362,88 @@ gsap.to("#pg6-rgt img",{
 
 
 
+
+
+gsap.from("#t-mid svg path, #svg svg path",{
+      
+  scrollTrigger:{
+    trigger: " #page7 " ,
+    scroller: "body" ,
+    start: "-6% 70%" ,
+    end: "100% 70%" ,
+    // markers: true,
+    onEnter:() => {
+      gsap.from("#t-mid svg path, #svg svg path",{
+        opacity:0,
+        // delay:2,
+        // scale:0,
+        duration:.5,
+        rotate:"180deg",
+        stagger:0.05,
+      })      
+    },
+    scrub: 2,// increase val for more smootheness
+  }
+})
+
+gsap.from("#t-lft *",{
+  stagger:.05,
+  y:100,
+  opacity:0,
+  scrollTrigger:{
+    trigger: " #page7 " ,
+    scroller: "body" ,
+    start: " 70% " ,
+    //end: "  " ,
+    // markers: true,
+    // scrub: 2,// increase val for more smootheness
+  },
+  
+
+})
+gsap.from("#t-rgt *",{
+  stagger:.05,
+  y:100,
+  opacity:0,
+  scrollTrigger:{
+    trigger: " #page7 " ,
+    scroller: "body" ,
+    start: " 70% " ,
+    //end: "  " ,
+    // markers: true,
+    // scrub: 2,// increase val for more smootheness
+  },
+  
+
+})
+gsap.from("#pt1 p",{
+  stagger:.08,
+  y:150,
+  opacity:0,
+  scrollTrigger:{
+    trigger: " #page7 " ,
+    scroller: "body" ,
+    start: " 40% " ,
+    //end: "  " ,
+    // markers: true,
+    // scrub: 2,// increase val for more smootheness
+  },
+  
+
+})
+gsap.from("#pt2",{
+  stagger:.05,
+  y:100,
+  opacity:0,
+  // delay:.4,
+  scrollTrigger:{
+    trigger: " #page7 " ,
+    scroller: "body" ,
+    start: " 25% " ,
+    //end: "  " ,
+    // markers: true,
+    // scrub: 2,// increase val for more smootheness
+  },
+  
+
+})
