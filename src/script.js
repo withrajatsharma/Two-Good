@@ -7,8 +7,8 @@ if (!isTouchDevice) {
     
     window.addEventListener("mousemove" , (e)=>{
         gsap.to(cursor,{
-          top:e.y,
-          left:e.x,
+          y:e.y,
+          x:e.x,
           duration:.3,
         })
   })
@@ -47,7 +47,7 @@ if (!isTouchDevice) {
           gsap.to(cursor,{
             width:"1.8rem",
             height:"1.8rem",
-            translateY:"-50%",
+            // translateY:"-50%",
             textContent:"PLAY"
           })
           
@@ -70,7 +70,7 @@ page5.addEventListener("mouseenter" , (e)=>{
             width:"6rem",
             height:"6rem",
             backgroundColor:"#d8e0e0",
-            translateY:"-50%",
+            // translateY:"-50%",
             opacity:.7,
             zIndex:0
           })
